@@ -1,5 +1,5 @@
-class Solution(object):
-    def productExceptSelf(self, n): 
+class Solution:
+    def productExceptSelf(self, n: List[int]) -> List[int]:
         res=[1]*(len(n))
         prefix=1
         for i in range(len(n)):
@@ -10,3 +10,4 @@ class Solution(object):
             res[i]*=postfix
             postfix *= n[i]
         return res
+        
