@@ -1,5 +1,3 @@
-import statistics
-
 class Solution:
     def findMedianSortedArrays(self, n1: List[int], n2: List[int]) -> float:
         
