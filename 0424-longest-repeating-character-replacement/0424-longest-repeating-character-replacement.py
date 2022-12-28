@@ -1,11 +1,10 @@
 from collections import defaultdict
 class Solution:
     def characterReplacement(self, s, k):
-        dic = defaultdict(list)
+        dic = defaultdict(int)
         start, end = 0, 0
         for end in range(1, len(s)+1):
-            if not s[end-1] in dic: dic[s[end-1]] = 1
-            else: dic[s[end-1]] += 1
+            dic[s[end-1]] += 1
             if end-start-max(dic.values()) > k: 
                 dic[s[start]] -= 1
                 start += 1
