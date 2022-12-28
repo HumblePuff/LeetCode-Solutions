@@ -1,7 +1,9 @@
 class Solution:
     def maxProfit(self, prices):
 
-        buy, ans = float('inf'), 0
+        buy = float('inf')
+        ans = 0
         for p in prices:
-            buy, ans = min(buy, p), max(ans, p-buy)
+            buy = min(buy, p)
+            ans = max(ans, p-buy)
         return ans
