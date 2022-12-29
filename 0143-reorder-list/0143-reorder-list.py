@@ -12,7 +12,7 @@ class Solution:
             arr.append( cur )
             cur, length = cur.next, length + 1
         
-		# ----------------------------------------------
+		# ----------------------------------------------som
         # Reorder with two-pointers
 		
         left, right = 0, length-1
