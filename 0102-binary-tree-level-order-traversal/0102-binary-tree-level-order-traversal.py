@@ -1,15 +1,7 @@
 class Solution:
-    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
-        ans = []
-        
-        def dfs(node, depth):
-            if not node:
-                return
-            if depth >= len(ans):
-                ans.append([])
-            ans[depth].append(node.val)
-            dfs(node.left, depth + 1)
-            dfs(node.right, depth + 1)
-        
-        dfs(root, 0)
+    def levelOrder(self, root):
+        ans, level = [], [root]
+        while root and level:
+            ans.append([node.val for node in level])            
+            level = [kid for n in level for kid in (n.left, n.right) if kid]
         return ans
