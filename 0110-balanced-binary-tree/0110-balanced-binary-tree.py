@@ -1,6 +1,6 @@
 class Solution:
     def isBalanced(self, root: TreeNode) -> bool:
-        if not root: return 1
+        if not root: return True
         l = self.isBalanced(root.left)
         if not l: return
         r = self.isBalanced(root.right)
