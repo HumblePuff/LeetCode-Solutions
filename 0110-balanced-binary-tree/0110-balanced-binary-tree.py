@@ -3,4 +3,8 @@ class Solution:
         if not root: return h
         l = self.isBalanced(root.left, h+1)
         r = self.isBalanced(root.right, h+1)
-        return abs(l-r) <= 1 and max(l, r)
+        #return abs(l-r) <= 1 and max(l, r)
+        if abs(l-r) <=1 :
+            return max(l,r)
+        else:
+            return False
