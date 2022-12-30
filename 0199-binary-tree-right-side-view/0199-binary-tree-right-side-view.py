@@ -4,8 +4,6 @@ class Solution:
             tmp=[]
             while root and nodes:
                 ans.append(nodes[-1].val)
-                nodes=[kid for 
-                       node in nodes
-                       for kid in (node.left,node.right) if kid]
+                nodes=[kid for node in nodes for kid in (node.left,node.right) if kid]
             return ans
         
